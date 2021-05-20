@@ -1,26 +1,14 @@
-//desafio 2
+//desafio 4
 
-// var usuario = prompt("Ingresa tu nombre de usuario:");
+const suma = (a, b) => a + b;
+const resta = (a, b) => a - b;
+const descuento = i => i * 0.15;
 
-// if (usuario == "Carlitos123" || usuario == "carlitos123") {
-//     let password = prompt("Ingresa tu password");
+let precioConsulta = 1200;
+let protocolo = 500;
 
-//     if (password === "123456") {
-//         alert("Bienvenido " + usuario);
-//     } else {
-//         alert("Contraseña erronea");
-//     }
-// } else {
-//     alert("Usuario incorrecto");
-// }
+let total = suma(resta(precioConsulta, descuento(precioConsulta)), protocolo);
+console.log("El precio de la consulta con el 15% de dto de su obra social mas el protocolo COVID seria $" + total)
 
-//desafio 3
-for (let i = 1; i <= 30 ; i++){
-    for (let x = 9; x <= 13 ; x++){
-    var ingresarNombre = prompt("Ingresar nombre y apellido");
-    alert("Hola " + ingresarNombre + " su turno es a las " +x+ " hs del dia " +i+ " de Junio");
-    }
-}
 
-/* seria un sistema de turnos que entrega turnos entre las 9 y las 13 hs, 
-al cumplirse esos turnos empieza a solicitar turnos para el dia siguiente  */
+
