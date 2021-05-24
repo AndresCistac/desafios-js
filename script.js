@@ -1,23 +1,29 @@
-//desafio 4 complementario
 
-const suma = (a, b) => a + b;
-const resta = (a, b) => a - b;
-const descuento = i => i * 0.15;
-const interes =  x => x * 0.10;
+// Desafio 5
 
-let precioConsulta = 1200;
-let protocolo = 500;
+class Turno{ 
+    constructor (nombre, apellido, afiliado, especialidad){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.afiliado = afiliado;
+    this.especialidad = especialidad;
+    }
+    solicitud() {
+        console.log("Se solicita turno para "+ this.nombre + " " + this.apellido);
+    }
+   
+    aceptar() { 
+        var okey =  prompt("Si es correcta la informacion ingresar OK");
 
-let total = suma(resta(precioConsulta, descuento(precioConsulta)), protocolo);
-console.log("El precio de la consulta con el 15% de dto de su obra social mas el protocolo COVID seria $" + total);
-
-let pago = prompt("Por favor ingrese si pagaria con Debito/Credito");
-
-
-if((pago == "Debito") || (pago == "debito")){
- alert("El total a abonar seria $" + total);
-}else{
- alert("El total a abonar con un 10% de recargo seria $" + suma(total, interes(total)));
+        if(okey == "OK") {
+            console.log("Se confirma turno para el Sr/Sra " + this.apellido + " especialidad: " + this.especialidad + ".");
+        }
+    }
+    
 }
 
+const turno1 = new Turno ("Alicia", "Almada", 212376, "Dermatologia");
+const turno2 = new Turno ("Leandro", "Perez", 207426,"Clinico");
 
+turno1.solicitud();
+turno1.aceptar();
