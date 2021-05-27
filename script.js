@@ -62,7 +62,7 @@ turnos.push (new Turno ("Marta", "Aguirre", 862356, "Guardia"));
 console.log(turnos.length);
 
 for (const turno of turnos){
-    console.log(turno.solicitud());
+   turno.solicitud();
 }
 const ginecologia = turnos.filter(turno => turno.especialidad =="Ginecologia");
 console.log(ginecologia)
