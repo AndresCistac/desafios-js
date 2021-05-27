@@ -1,0 +1,126 @@
+*{
+    margin: 5px;
+    padding: 0;
+    text-decoration: none;
+}
+
+.banner{
+    height: 200px;
+}
+.especialidades{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.clinica{
+    width: 30vh;
+    height: 15vh;
+    padding: 5vh;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #666; 
+}
+.clinica h3{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.a-clinica:link{
+    color: grey;    
+}
+.a-clinica:visited{
+    color: grey;
+}
+.a-clinica:hover{
+    color: #1F4C8F;
+}
+
+.traumatologia{
+    width: 30vh;
+    height: 15vh;
+    padding: 5vh;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #666; 
+}
+.traumatologia h3{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.a-traumatologia:link{
+    color: grey;    
+}
+.a-traumatologia:visited{
+    color: grey;
+}
+.a-traumatologia:hover{
+    color: #1F4C8F;
+}
+
+.ginecologia{
+    width: 30vh;
+    height: 15vh;
+    padding: 5vh;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #666; 
+}
+.ginecologia h3{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.a-ginecologia:link{
+    color: grey;    
+}
+.a-ginecologia:visited{
+    color: grey;
+}
+.a-ginecologia:hover{
+    color: #1F4C8F;
+}
+
+.dermatologia{
+    width: 30vh;
+    height: 15vh;
+    padding: 5vh;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #666; 
+}
+.dermatologia h3{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.a-dermatologia:link{
+    color: grey;    
+}
+.a-dermatologia:visited{
+    color: grey;
+}
+.a-dermatologia:hover{
+    color: #1F4C8F;
+}
+
+
+
+.laboratorio{
+    width: 30vh;
+    height: 15vh;
+    padding: 5vh;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #666; 
+}
+.laboratorio h3{
+    margin: 0;
+    text-align: center;
+    padding-top: 5vh;
+}
+.a-laboratorio:link{
+    color: grey;    
+}
+.a-laboratorio:visited{
+    color: grey;
+}
+.a-laboratorio:hover{
+    color: #1F4C8F;
+}
