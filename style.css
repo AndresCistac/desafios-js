@@ -1,11 +1,11 @@
 *{
-    margin: 5px;
+    margin: 0px;
     padding: 0;
     text-decoration: none;
 }
 
 .banner{
-    height: 200px;
+    width: 100%;
 }
 .especialidades{
     display: flex;

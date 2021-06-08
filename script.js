@@ -74,29 +74,48 @@
 
 //desafio 6 complementario
 
-class Turno{ 
-    constructor (nombre, apellido, afiliado, especialidad){
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.afiliado = afiliado;
-    this.especialidad = especialidad;
-    }
-    }
+// class Turno{ 
+//     constructor (nombre, apellido, afiliado, especialidad){
+//     this.nombre = nombre;
+//     this.apellido = apellido;
+//     this.afiliado = afiliado;
+//     this.especialidad = especialidad;
+//     }
+//     }
 
-const turnos = [];
-
-
-turnos.push (new Turno ("Alicia", "Almada", 212376, "Ginecologia"));
-turnos.push (new Turno ("Leandro", "Perez", 207426,"Clinica"));
-turnos.push (new Turno ("Alejandra", "Marques", 605446,"Ginecologia"));
-turnos.push (new Turno ("Marta", "Aguirre", 862356, "Guardia"));
+// const turnos = [];
 
 
-var orden__afiliado = () =>{
-    turnos.sort((a,b) => {
- if(a.afiliado < b.afiliado) return -1
-    return 1
-    })
-}
-orden__afiliado();
-console.log(turnos);
+// turnos.push (new Turno ("Alicia", "Almada", 212376, "Ginecologia"));
+// turnos.push (new Turno ("Leandro", "Perez", 207426,"Clinica"));
+// turnos.push (new Turno ("Alejandra", "Marques", 605446,"Ginecologia"));
+// turnos.push (new Turno ("Marta", "Aguirre", 862356, "Guardia"));
+
+
+// var orden__afiliado = () =>{
+//     turnos.sort((a,b) => {
+//  if(a.afiliado < b.afiliado) return -1
+//     return 1
+//     })
+// }
+// orden__afiliado();
+// console.log(turnos);
+
+//desafio 7
+
+var boton = document.createElement("button");
+boton.type="submit";
+boton.innerText = "Enviar";
+boton.setAttribute("oneclick", "submit");
+document.getElementById("formulario").appendChild(boton);
+
+
+let datos = [];
+datos[0] = document.getElementById("nombre").value;
+datos[1] = document.getElementById("dni").value;
+
+
+
+
+
+
