@@ -4,73 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Turnero online</title>
 </head>
 <body>
-    <main>
-    <header class="banner">
-        <img class="banner" src="img/logoClinica.png" alt="banner clinica">
+    <header>
+        <div class="banner"></div>
+        <nav>	
+            <!-- Agregar iconios de ion icons o font awesome-->
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="misTurnos">
+                    <a href="misTurnos.html">Mis Turnos<span>0</span> </a></li>
+            </ul>
+        </nav>
     </header>
 
-    <h2>Solicita tu turno</h2>
-    
-    <div class="especialidades">
-        <a class="a-clinica" href="#">
-        <div class="clinica">
-        
-            <h3>Medicina Clinica</h3>
-            <ul>
-                <li>Dr. Ponce</li>
-                <li>Dra. Martinez</li>
-                <li>Dra. Suarez</li>
-            </ul>
-        </div>
-    </a>
+    <div class="contenedorTurnos">
 
-    <a class="a-traumatologia" href="#">
-    <div class="traumatologia">
-        <h3>Traumatologia</h3>
-        <ul>
-            <li>Dra. Serna</li>
-            <li>Dr. Rosas</li>
-        </ul>
-    </div>
-    </a>
-    <a class="a-ginecologia" href="#">
-        <div class="ginecologia">
-            <h3>Ginecologia</h3>
-            <ul>
-                <li>Dra. Perez</li>
-                <li>Dr. Gimenez</li>
-            </ul>
-        </div>
-        </a>
-        <a class="a-dermatologia" href="#">
-            <div class="dermatologia">
-                <h3>Dermatologia</h3>
-                <ul>
-                    <li>Dra. Lopez</li>
-                    <li>Dr. Benitez</li>
-                </ul>
+        <div id="turnosClinica" class="turnosClinica"> 
+            <div class="turnos">
+                <div class="turnosHover">
+                    <h3>Lunes 05/07/2021</h3>
+                    <h3>hora</h3>
+                    <a class="solicitar turno1" href="#">Solicitar</a>
+                    
+                </div>
+                <div class="turnosHover">
+                    <h3>Lunes 15/07/2021</h3>
+                    <h3>hora</h3>
+                    <a class="solicitar turno2" href="#">Solicitar</a>
+                   
+                </div>
+                <div class="turnosHover">
+                    <h3>Lunes 22/07/2021</h3>
+                    <h3>hora</h3>
+                    <a class="solicitar turno3" href="#">Solicitar</a>
+                    
+                </div>
+
             </div>
-            </a>
-    <a class="a-laboratorio" href="#">
-    <div class="laboratorio">
-        <h3>Laboratorio</h3>
-        
+            <!--<div class="turnosPerez">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div> -->
+            
+        </div>
     </div>
-    </a>
-</div>
 
-<form id="formulario">
-    <input id="nombre" type="text" placeholder="Ingresa tu nombre completo"> <br>
-    <input id="dni" type="number" placeholder="Ingresa tu dni">
-</form>
+    </div>
 
-    
 
-</main>
     <script src="script.js"></script>
 </body>
 </html>

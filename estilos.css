@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;;
+}
+
+header{
+    background-image: url("img/logoClinica.png");
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 200px;
+}
+
+
+li{
+    display: inline-block;
+    padding-right: 10px;
+    list-style: none;
+}
+
+li a{
+    padding: 5px;
+    background-color: grey;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+.turnos {
+    display: inline-block;
+    align-content: center;
+}
+/* .turnos div {
+    display: flex;
+    padding: 10px;
+} */
+
+
+
+.solicitar{
+    width: 200px;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: grey;
+    color: black;
+    text-decoration: none
+}
+.turnosHover{
+    display: flex;
+    padding: 10px;
+}
+
+.turnosHover:hover .turno1,
+.turnosHover:hover .turno2,
+.turnosHover:hover .turno3{
+    padding-left: 15px;
+    opacity: 1;
+    text-decoration: none;
+}
+

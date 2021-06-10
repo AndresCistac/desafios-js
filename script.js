@@ -1,121 +1,55 @@
-// Desafio 5
+let solicitudes = document.getElementsByClassName("solicitar");
+for (let i=0; i < solicitudes.length; i++){
+    solicitudes[i].addEventListener("click", () =>{
+        cantSolicitudes();
+    } )
+}
+function cantSolicitudes() {
+    var numeroSolicitudes = localStorage.getItem("cantSolicitudes");
+    numeroSolicitudes = parseInt(numeroSolicitudes);
+    if(numeroSolicitudes){
+        localStorage.setItem("cantSolicitudes", numeroSolicitudes + 1 );
+        document.querySelector(".misTurnos span").textContent = numeroSolicitudes +1;
+    }else{
+        localStorage.setItem("cantSolicitudes", 1 );
+        document.querySelector(".misTurnos span").textContent = 1;
+    }
+};
 
-// class Turno{ 
-//     constructor (nombre, apellido, afiliado, especialidad){
-//     this.nombre = nombre;
-//     this.apellido = apellido;
-//     this.afiliado = afiliado;
-//     this.especialidad = especialidad;
-//     }
-//     solicitud() {
-//         console.log("Se solicita turno para "+ this.nombre + " " + this.apellido);
-//     }
-   
-//     aceptar() { 
-//         var okey =  prompt("Si es correcta la informacion ingresar OK");
+//desafio 7 complementario
+//Constructor para turnos
+class Turno{
+    constructor(id, dia, fecha, hora){
+        this.id = id;
+        this.dia = dia;
+        this.fecha = fecha;
+        this.hora = hora;
+    }
+}
 
-//         if(okey == "OK") {
-//             console.log("Se confirma turno para el Sr/Sra " + this.apellido + " especialidad: " + this.especialidad + ".");
-//         }
-//     }
-    
-// }
+const turno1 = new Turno("turno1", "Martes","5/07/2021", " hora");
+const turno2 = new Turno("turno2", "Martes","12/07/2021", " hora");
+const turno3 = new Turno("turno3", "Martes","18/07/2021", " hora");
+const turno4 = new Turno("turno4", "Martes","25/07/2021", " hora");
+const turno5 = new Turno("turno5", "Martes","30/07/2021", " hora");
 
-// const turno1 = new Turno ("Alicia", "Almada", 212376, "Dermatologia");
-// const turno2 = new Turno ("Leandro", "Perez", 207426,"Clinico");
+const losTurnos = [turno1, turno2, turno3, turno4, turno5];
+let turnosClinica = document.getElementById("turnosClinica");
 
-// turno1.solicitud();
-// turno1.aceptar();
-
-        //desafio 6 y primer entrega final
-
-// class Turno{ 
-//     constructor (nombre, apellido, afiliado, especialidad){
-//     this.nombre = nombre;
-//     this.apellido = apellido;
-//     this.afiliado = afiliado;
-//     this.especialidad = especialidad;
-//     }
-//     solicitud() {
-//         console.log("Se solicita turno para "+ this.nombre + " " + this.apellido);
-//     }
-
-   
-//     aceptar() { 
-//         var okey =  prompt("Si es correcta la informacion ingresar OK");
-
-//         if((okey == "OK") || (okey == "ok")) {
-//             console.log("Se confirma turno para el Sr/Sra " + this.apellido + " especialidad: " + this.especialidad + ".");
-//         } else{
-//             console.log("Le pedimos por favor volver a ingresar los datos, Muchas gracias.")
-//         }
-    
-//     }
-    
-// }
-// const turnos = [];
-
-
-// turnos.push (new Turno ("Alicia", "Almada", 212376, "Ginecologia"));
-// turnos.push (new Turno ("Leandro", "Perez", 207426,"Clinica"));
-// turnos.push (new Turno ("Alejandra", "Marques", 605446,"Ginecologia"));
-// turnos.push (new Turno ("Marta", "Aguirre", 862356, "Guardia"));
-// console.log(turnos.length);
-
-// console.log(turnos);
-
-
-// for (const turno of turnos){
-//    turno.solicitud();
-// }
-// const ginecologia = turnos.filter(turno => turno.especialidad =="Ginecologia");
-// console.log(ginecologia)
-
-
-//desafio 6 complementario
-
-// class Turno{ 
-//     constructor (nombre, apellido, afiliado, especialidad){
-//     this.nombre = nombre;
-//     this.apellido = apellido;
-//     this.afiliado = afiliado;
-//     this.especialidad = especialidad;
-//     }
-//     }
-
-// const turnos = [];
-
-
-// turnos.push (new Turno ("Alicia", "Almada", 212376, "Ginecologia"));
-// turnos.push (new Turno ("Leandro", "Perez", 207426,"Clinica"));
-// turnos.push (new Turno ("Alejandra", "Marques", 605446,"Ginecologia"));
-// turnos.push (new Turno ("Marta", "Aguirre", 862356, "Guardia"));
-
-
-// var orden__afiliado = () =>{
-//     turnos.sort((a,b) => {
-//  if(a.afiliado < b.afiliado) return -1
-//     return 1
-//     })
-// }
-// orden__afiliado();
-// console.log(turnos);
-
-//desafio 7
-
-var boton = document.createElement("button");
-boton.type="submit";
-boton.innerText = "Enviar";
-boton.setAttribute("oneclick", "submit");
-document.getElementById("formulario").appendChild(boton);
-
-
-let datos = [];
-datos[0] = document.getElementById("nombre").value;
-datos[1] = document.getElementById("dni").value;
-
-
-
-
+for ( const turno of losTurnos ){
+    var turnosDiv = document.createElement("div");
+    turnosDiv.setAttribute("class", "turnos turnosHover");
+    //iterar para la class en el a con el id
+    turnosDiv.innerHTML= `
+                <div class="turnosHover">
+                    <h3> ${turno.dia} </h3>
+                    <h3>${turno.fecha}</h3>
+                    <h3>${turno.hora}</h3>
+                    <a class="solicitar ${turno.id}" href="#">Solicitar</a> 
+                </div>`;
+                
+                turnosClinica.appendChild(turnosDiv);
+                
+}
 
 
