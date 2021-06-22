@@ -33,6 +33,16 @@ li a{
     border-radius: 10px;
 
 }
+
+.contenedorTurnos,
+.contenedorTurnos2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
 .turnos {
     display: inline-block;
     align-content: center;
@@ -66,3 +76,18 @@ li a{
     text-decoration: none;
 }
 
+/* css de mis turnos */
+
+.contenedorTurnos2{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.turnosPrincipal{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid grey;
+}
