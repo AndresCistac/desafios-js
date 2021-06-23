@@ -1,3 +1,16 @@
+//Boton para desplegar turnos  AGREGAR ESTIILOS
+let visible = true;
+$("#btnTurnosDisponibles").on('click', () => {
+    if(visible==true){
+        $("#turnosClinica").css({ display: "none" });
+    }else{
+        $("#turnosClinica").css({ display: "block" });
+    }   
+    visible = !visible;
+});
+
+
+
 //Constructor para turnos
 class Turno{
     constructor(id, fecha, hora){
