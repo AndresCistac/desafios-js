@@ -14,13 +14,12 @@ header{
 
 nav{
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: flex-end;
     padding-top: 200px;
 }
 
 
-li{
+nav li{
     display: inline-block;
     padding-right: 10px;
     list-style: none;
@@ -33,6 +32,43 @@ li a{
     border-radius: 10px;
 
 }
+/* prueba mis turnos en el index */
+.misTurnos{
+    padding: 5px;
+    background-color: grey;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.misTurnos:hover{
+    background-color: lightblue;
+}
+
+.turnosCart{
+    position: absolute;
+  min-height: 10rem;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.5);
+  width: 0;
+  overflow: hidden;
+}
+
+.show-cart {
+    width: 18rem;
+    padding: 2rem 1.5rem;
+    margin-top: 40vh;
+    transform: rotateY(-360deg);
+    background-color: blue;
+  }
+
+#btnTurnosDisponibles{
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 100px;
+}
+
+
 
 .contenedorTurnos,
 .contenedorTurnos2{
@@ -47,11 +83,6 @@ li a{
     display: inline-block;
     align-content: center;
 }
-/* .turnos div {
-    display: flex;
-    padding: 10px;
-} */
-
 
 
 .solicitar{
@@ -68,9 +99,7 @@ li a{
     padding: 10px;
 }
 
-.turnosHover:hover .turno1,
-.turnosHover:hover .turno2,
-.turnosHover:hover .turno3{
+.turnosHover:hover {
     padding-left: 15px;
     opacity: 1;
     text-decoration: none;

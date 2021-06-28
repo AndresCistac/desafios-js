@@ -16,14 +16,24 @@
             <!-- Agregar iconios de ion icons o font awesome-->
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li class="misTurnos">
-                    <a href="misTurnos.html">Mis Turnos<span>0</span> </a></li>
-            </ul>
+                <li id="misTurnos" class="misTurnos ">
+                    <p > Mis turnos <span id="item-count">0</span></p>
+                </li>
+                </ul>
         </nav>
+
+        <!-- boton de mis turnos 
+    <div id="misTurnos" class="misTurnos ">
+        <p > Mis turnos <span id="item-count">0</span></p>
+    </div> -->
     </header>
 
+    <div id="turnosCart" class="turnosCart">
+        
+    </div>
+    <button id="btnTurnosDisponibles">Turnos disponibles</button>
     <div class="contenedorTurnos">
-        <button id="btnTurnosDisponibles">Turnos disponibles</button>
+
         <div id="turnosClinica" class="turnosClinica">          
             <div class="turnos">
                 <div class="turnosHover">

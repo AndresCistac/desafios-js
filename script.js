@@ -1,3 +1,14 @@
+function turnero(){
+const misTurnos = document.getElementById('misTurnos');
+const turnosCart = document.getElementById('turnosCart');
+
+misTurnos.addEventListener("click", function(){
+    turnosCart.classList.toggle('show-cart')
+})
+};
+turnero();
+
+
 //Boton para desplegar turnos  AGREGAR ESTIILOS
 let visible = true;
 $("#btnTurnosDisponibles").on('click', () => {
@@ -62,10 +73,10 @@ function cantSolicitudes(turno) {
     numeroSolicitudes = parseInt(numeroSolicitudes);
     if(numeroSolicitudes){
         localStorage.setItem("cantSolicitudes", numeroSolicitudes + 1 );
-        document.querySelector(".misTurnos span").textContent = numeroSolicitudes +1;
+        document.querySelector("#item-count").textContent = numeroSolicitudes +1;
     }else{
         localStorage.setItem("cantSolicitudes", 1 );
-        document.querySelector(".misTurnos span").textContent = 1;
+        document.querySelector("#item-count").textContent = 1;
     }
     guardarTurnos(turno);
 };
@@ -73,7 +84,7 @@ function cantSolicitudes(turno) {
 function recargaPagina () {
     var numeroSolicitudes = localStorage.getItem("cantSolicitudes");
     if(numeroSolicitudes){
-        document.querySelector(".misTurnos span").textContent = numeroSolicitudes;
+        document.querySelector("#item-count").textContent = numeroSolicitudes;
     }
 }
 recargaPagina ();
@@ -102,8 +113,14 @@ function guardarTurnos(turno) {
 function mostrarTurnos(){
     let turnosGuardados = localStorage.getItem("turnosPendientes");
     turnosGuardados = JSON.parse(turnosGuardados);
-    let contenedorTurnos = querySelector (".contenedorTurnos2");
-    if(turnosPendientes && contenedorTurnos){
-        console.log("funciona")
+    let contenedorTurnos = document.querySelector(".turnosCart");
+
+    console.log("turnosGuardados")
+    if(turnosGuardados && contenedorTurnos){
+        contenedorTurnos.innerHTML= '';
+
+
     }
+    
 }
+mostrarTurnos();
